@@ -1,7 +1,8 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 
-import addPokemonAction from '../actions/addPokemonAction.js'
+import addPokemonAction from '../actions/addPokemonAction.js';
+import CardPokemon from './cardPokemon.js';
 
 export default function PokemonList() {
     const pokemon = useSelector(state => state.data);
@@ -14,7 +15,7 @@ export default function PokemonList() {
     return (
         <>
             <ul>
-                {pokemon.map(pokemon => <li key={pokemon}>{pokemon}</li>)}
+                {pokemon.map(pokemon => <CardPokemon key={pokemon} nome={pokemon} />)}
             </ul>
 
             <label>Pokemon:</label>
