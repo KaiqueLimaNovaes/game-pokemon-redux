@@ -8,7 +8,7 @@ import PokemonList from './components/pokemonList.js';
 
 function App() {
   return (
-    <Provider store={store} id="principal">
+    <Provider store={store}>
       <PokemonList />
     </Provider>
   );
