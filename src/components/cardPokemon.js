@@ -6,7 +6,7 @@ import './cardPokemon.css';
 export default function CardPokemon(props){
 
     let imgF = "https://cdn.bulbagarden.net/upload/7/79/Dream_Pok%C3%A9_Ball_Sprite.png";
-    let imgT = "https://cdn.bulbagarden.net/upload/7/79/Dream_Pok%C3%A9_Ball_Sprite.png";
+    let imgT = "https://cdn.bulbagarden.net/upload/9/95/Normal_icon_SwSh.png";
     const pokemonChoice = props.nome;
     
     if (pokemonChoice == 'charmander'){

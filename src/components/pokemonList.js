@@ -6,12 +6,14 @@ import addPokemonAction from '../actions/addPokemonAction.js';
 import addPokemonOp from '../actions/addPokemonOp.js';
 import CardPokemon from './cardPokemon.js';
 import CardPokemonOp from './cardPokemonOp.js';
+import CardBatalha from './cardBatalha.js';
 
 export default function PokemonList() {
     const pokemon = useSelector(state => state.pokemon.data);
     const pokemonOp = useSelector(state => state.pokemonOp.data);
+    const batalha = useSelector(state => state.batalha.data);
 
-    console.log(pokemon);
+    console.log(batalha);
 
     const dispatch = useDispatch();
     const dispatchOp = useDispatch();
@@ -48,6 +50,9 @@ export default function PokemonList() {
                     {pokemon.map(pokemon => <CardPokemon key={pokemon} nome={pokemon} />)}
                     <div>VS</div>
                     {pokemonOp.map(pokemon => <CardPokemonOp key={pokemon} nome={pokemonOp} />)}
+                </Row>
+                <Row>
+                    {batalha.map(batalha => <CardBatalha key={batalha} nome={batalha} seu={pokemon} op={pokemonOp} />)}
                 </Row>
             </Col>
         </Row>

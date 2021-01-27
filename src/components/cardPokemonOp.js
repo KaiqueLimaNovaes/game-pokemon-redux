@@ -3,10 +3,10 @@ import {Row, Col, Container} from 'react-bootstrap';
 
 import './cardPokemon.css';
 
-export default function CardPokemon(props){
+export default function CardPokemonOp(props){
 
     let imgF = "https://cdn.bulbagarden.net/upload/7/79/Dream_Pok%C3%A9_Ball_Sprite.png";
-    let imgT = "https://cdn.bulbagarden.net/upload/7/79/Dream_Pok%C3%A9_Ball_Sprite.png";
+    let imgT = "https://cdn.bulbagarden.net/upload/9/95/Normal_icon_SwSh.png";
     let pokemonOp = props.nome;
     let nomeOp = 'pokemon oponente';
     //const pokemonChoice = props.nome;
