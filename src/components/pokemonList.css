@@ -1,0 +1,33 @@
+#botaoA{
+    width: 180px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 2px black;
+    background-color: rgb(159, 159, 255);
+    font-weight: bold;
+}
+
+#botaoJ{
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 2px black;
+    background-color: rgb(159, 159, 255);
+    font-weight: bold;
+}
+
+#inputPokemon{
+    width: 180px;
+}
+
+#t{
+    font-weight: bold;
+}
+
+#instrucoes{
+    justify-self: start;
+}
+
+#imgVersus{
+    margin-top: 75px;
+}

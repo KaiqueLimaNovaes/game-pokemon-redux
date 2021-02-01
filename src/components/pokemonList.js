@@ -8,6 +8,10 @@ import CardPokemon from './cardPokemon.js';
 import CardPokemonOp from './cardPokemonOp.js';
 import CardBatalha from './cardBatalha.js';
 
+import './pokemonList.css';
+
+import Versus from '../assets/images/versus.png'
+
 export default function PokemonList() {
     const pokemon = useSelector(state => state.pokemon.data);
     const pokemonOp = useSelector(state => state.pokemonOp.data);
@@ -30,25 +34,42 @@ export default function PokemonList() {
     return (
         <Row>
             <Col xs="3">
-                <label>Pokemon:</label>
+                <label id="t">Escolha seu pokemon:</label>
                 <br />
-                <input type="text" id="inputPokemon"></input>
+                
+                <select id="inputPokemon" name="inputPokemon">
+                    <option value="charmander">charmander</option>
+                    <option value="bulbasaur">bulbasaur</option>
+                    <option value="squirtle">squirtle</option>
+                    <option value="pikachu">pikachu</option>
+                </select>
                 <br />
                 <br />
-                <button type="button" onClick={addPokemon}>
+                <button id="botaoA" type="button" onClick={addPokemon}>
                     Adicionar pokemon
                 </button>
                 <br />
                 <br />
-                <button type="button" onClick={randonOp}>
+                <button id="botaoJ" type="button" onClick={randonOp}>
                     Jogar
                 </button>
+                <br />
+                <br />
+                <p id="instrucoes">
+                    <b>1</b> - Escolha seu pokemon;
+                    <br />
+                    <b>2</b> - Clique em adicionar Pokemon;
+                    <br />
+                    <b>3</b> - Clique em jogar;
+                    <br />
+                    <b>4</b> - O resultado da batalha aparecerá.
+                </p>
             </Col>
 
             <Col xs="9">
                 <Row>
                     {pokemon.map(pokemon => <CardPokemon key={pokemon} nome={pokemon} />)}
-                    <div>VS</div>
+                    <img id="imgVersus" src={Versus} alt="" width="264px" height="200px"></img>
                     {pokemonOp.map(pokemon => <CardPokemonOp key={pokemon} nome={pokemonOp} />)}
                 </Row>
                 <Row>
